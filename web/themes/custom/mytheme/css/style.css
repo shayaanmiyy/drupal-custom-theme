@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-weight: 500;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, textarea, select {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-weight: 400;
+}
+
+textarea {
+    resize: vertical;
+}
+
+blockquote {
+    margin: 1rem 0;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #ccc;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    font-weight: 400;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    overflow-x: auto;
+}
