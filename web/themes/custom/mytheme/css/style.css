@@ -16,7 +16,30 @@ body {
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+article.blog.educational {
+    height: 100vh;
+    background-color: navy;
+    color: white;
+}
+
+article.blog.marketing {
+    height: 100vh;
+    background-color: red;
+    color: white;
+}
+
+article.blog.product {
+    height: 100vh;
+    background-color: green;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -61,7 +84,8 @@ a:hover {
     color: #0056b3;
 }
 
-ul, ol {
+ul,
+ol {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 400;
@@ -84,7 +108,9 @@ button:hover {
     background-color: #0056b3;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
