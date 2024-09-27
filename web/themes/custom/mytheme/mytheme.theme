@@ -1,0 +1,20 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for nodes.
+ */
+function mytheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $node = $variables['elements']['#node'];
+  if ($node->getType() == 'blog') {
+    if (!$node->get('field_type')->isEmpty()) {
+      $term = $node->get('field_type')->entity;
+      if ($term) {
+        $term_slug = Html::getClass($term->label());
+        $suggestions[] = 'node__blog__' . $term_slug;
+        return $suggestions;
+      }
+    }
+  }
+}

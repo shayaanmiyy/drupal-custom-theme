@@ -1,0 +1,17 @@
+<article class="blog educational">
+	<h2 class="blog__title">
+		<a href="{{ url }}">{{ label }}</a>
+	</h2>
+	{{ dump(content) }}
+	<div class="blog__meta">
+		<span class="blog__type">{{ content.field_type }}</span>
+	</div>
+
+	<div class="blog__content">
+		{{ content.field_body }}
+	</div>
+
+	<div class="blog__read-more">
+		<a href="{{ url }}" class="blog__link">Read More</a>
+	</div>
+</article>
