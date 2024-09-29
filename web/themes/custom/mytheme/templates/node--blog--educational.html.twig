@@ -8,7 +8,36 @@
 	</div>
 
 	<div class="blog__content">
-		{{ content.field_body }}
+		{{ attach_library('mytheme/slick_slider') }}
+
+		<ol>
+			{% for key, value in content  %}
+				<li>{{ key }}</li>
+			{% endfor %}
+		</ol>
+
+
+		{% block paragraph %}
+			{% if content.field_slider is not empty %}
+				<div class="slick-slider">
+					{% for image in content.field_slider %}
+						<div class="slick-slide">
+							{{ image.content }}
+							{# Renders the image #}
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="btn-wrap">
+					<button class="prev-btn custom-btn">Previous</button>
+					<button class="next-btn custom-btn">Next</button>
+				</div>
+			{% else %}
+				<p>No images available for the slider.</p>
+			{% endif %}
+		{% endblock paragraph %}
+
+		{{ content.body }}
 	</div>
 
 	<div class="blog__read-more">
