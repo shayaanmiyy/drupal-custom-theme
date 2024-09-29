@@ -5,3 +5,8 @@ global-styling:
       css/style.css: {}
   js:
     js/script.js: {}
+  
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/once  # Correctly included the once library
