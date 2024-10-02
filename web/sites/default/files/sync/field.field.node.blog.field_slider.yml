@@ -1,0 +1,37 @@
+uuid: 797a853a-4e37-43e0-b198-8f16f177fee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider
+    - node.type.blog
+    - paragraphs.paragraphs_type.slick_slider
+  module:
+    - entity_reference_revisions
+id: node.blog.field_slider
+field_name: field_slider
+entity_type: node
+bundle: blog
+label: Slider
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slick_slider: slick_slider
+    negate: 0
+    target_bundles_drag_drop:
+      ingredients:
+        weight: 4
+        enabled: false
+      ingredients_types:
+        weight: 5
+        enabled: false
+      slick_slider:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

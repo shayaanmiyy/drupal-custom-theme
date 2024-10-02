@@ -1,0 +1,19 @@
+uuid: 02b559fc-547d-4be0-b954-b24912b03661
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imageinfo
+    - paragraphs.paragraphs_type.slick_slider
+id: paragraph.slick_slider.field_imageinfo
+field_name: field_imageinfo
+entity_type: paragraph
+bundle: slick_slider
+label: imageinfo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: ea0d333d-f658-46aa-92a1-d80bd916b92a
+langcode: en
+status: true
+dependencies: {  }
+id: ingredients_types
+label: 'Ingredients Types'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

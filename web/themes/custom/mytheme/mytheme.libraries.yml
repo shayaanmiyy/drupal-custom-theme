@@ -5,6 +5,10 @@ global-styling:
       css/style.css: {}
   js:
     js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
 
 slick_slider:
   version: 1.x

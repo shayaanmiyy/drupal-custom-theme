@@ -1,0 +1,35 @@
+uuid: 87e27dcc-223b-4112-9564-8b4ada46b398
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slick_slider.field_image
+    - field.field.paragraph.slick_slider.field_imageinfo
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.slick_slider
+  module:
+    - image
+id: paragraph.slick_slider.default
+targetEntityType: paragraph
+bundle: slick_slider
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_imageinfo:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

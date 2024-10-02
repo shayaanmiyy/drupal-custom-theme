@@ -1,0 +1,19 @@
+uuid: a67f6a2d-0c0c-466e-95f8-28d93c6c7b16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredients_names
+    - paragraphs.paragraphs_type.ingredients
+id: paragraph.ingredients.field_ingredients_names
+field_name: field_ingredients_names
+entity_type: paragraph
+bundle: ingredients
+label: 'Ingredients Names'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
