@@ -1,0 +1,84 @@
+uuid: 0caa8f73-d061-4ee2-a13c-9b93c044ecf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee_directory.body
+    - field.field.node.employee_directory.field_bio
+    - field.field.node.employee_directory.field_contact_information
+    - field.field.node.employee_directory.field_department
+    - field.field.node.employee_directory.field_employee_image
+    - field.field.node.employee_directory.field_job_title
+    - field.field.node.employee_directory.field_projects
+    - node.type.employee_directory
+  module:
+    - image
+    - text
+    - user
+id: node.employee_directory.default
+targetEntityType: node
+bundle: employee_directory
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_bio:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_contact_information:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_department:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_employee_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_projects:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

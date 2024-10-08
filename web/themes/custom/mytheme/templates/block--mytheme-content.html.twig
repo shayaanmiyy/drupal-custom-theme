@@ -1,0 +1,32 @@
+{# block--mytheme-content.html.twig #}
+
+<div class="employee-details-block">
+  {# Check if the title is set and display it #}
+  {% if title is not empty %}
+    <h2>{{ title['#markup'] }}</h2>
+  {% endif %}
+
+  {# Render the markup content #}
+  <div class="employee-details-content">
+    {{ content|raw }}
+  </div>
+
+  {# Optional: Check for any attached libraries or assets #}
+  {% if attached is not empty %}
+    {# Render the attached assets here, if needed #}
+    {{ attached }}
+  {% endif %}
+</div>
+
+
+{# In your base template, e.g., page.html.twig #}
+<div id="employee-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-body">
+            <h2>Employee Details</h2>
+            <div id="modal-employee-content"></div>
+        </div>
+    </div>
+</div>
+

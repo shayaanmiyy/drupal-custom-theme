@@ -3,11 +3,13 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+
   js:
     js/script.js: {}
   dependencies:
     - core/jquery
     - core/drupal
+    - core/drupalSettings
     - core/once
 
 slick_slider:
@@ -18,3 +20,13 @@ slick_slider:
       libraries/slick/slick-theme.css: {}
   js:
     libraries/slick/slick.js: {}
+
+colorbox:
+  version: 1.x
+  js:
+    libraries/colorbox/colorbox-min.js: {}
+  css:
+    theme:
+      libraries/colorbox/colorbox.css: {}
+  dependencies:
+    - core/jquery

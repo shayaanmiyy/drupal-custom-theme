@@ -1,0 +1,68 @@
+
+
+<div class="employee-directory">
+  
+  <div class="employee-details">
+    {% if content.field_department is not empty %}
+      <div class="field-department">
+        <h3>Department:</h3>
+        {{ content.field_department|render }}
+      </div>
+    {% endif %}
+
+    <hr>
+    <br> 
+    
+    {% if content.field_job_title is not empty %}
+      <div class="field-job-title">
+        <h3>Job Title:</h3>
+        {{ content.field_job_title|render }}
+      </div>
+    {% endif %}
+
+    <hr>
+    <br> 
+    
+    {% if content.field_contact_information is not empty %}
+      <div class="field-contact-information">
+        <h3>Contact Information:</h3>
+        {{ content.field_contact_information|render }}
+      </div>
+    {% endif %}
+
+    <hr>
+    <br> 
+    
+    {% if content.field_bio is not empty %}
+      <div class="field-bio">
+        <h3>Bio:</h3>
+        {{ content.field_bio|render }}
+      </div>
+    {% endif %}
+
+    <hr>
+    <br> 
+    
+    {% if content.field_projects is not empty %}
+      <div class="field-projects">
+        <h3>Projects:</h3>
+        {{ content.field_projects|render }}
+      </div>
+    {% endif %}
+
+    <hr>
+    <br> 
+    
+    {% if content.body is not empty %}
+      <div class="field-body">
+        <h3>Details:</h3>
+        {{ content.body|render }}
+      </div>
+    {% endif %}
+
+    <hr>
+    <br> 
+    
+  </div>
+</div>
+

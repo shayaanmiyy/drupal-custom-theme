@@ -1,0 +1,42 @@
+uuid: 1c06ce89-d4f1-4722-9db7-1003d28b556f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.employee_directory.body
+    - field.field.node.employee_directory.field_bio
+    - field.field.node.employee_directory.field_contact_information
+    - field.field.node.employee_directory.field_department
+    - field.field.node.employee_directory.field_employee_image
+    - field.field.node.employee_directory.field_job_title
+    - field.field.node.employee_directory.field_projects
+    - node.type.employee_directory
+  module:
+    - text
+    - user
+id: node.employee_directory.teaser
+targetEntityType: node
+bundle: employee_directory
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bio: true
+  field_contact_information: true
+  field_department: true
+  field_employee_image: true
+  field_job_title: true
+  field_projects: true

@@ -1,0 +1,29 @@
+uuid: efb6a601-4fe2-433b-a873-d129c78c888b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accounts
+    - node.type.employee_directory
+    - node.type.projects
+id: node.projects.field_accounts
+field_name: field_accounts
+entity_type: node
+bundle: projects
+label: 'Project Manager'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      employee_directory: employee_directory
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
