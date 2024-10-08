@@ -3,9 +3,12 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      libraries/bootstrap/dist/css/bootstrap.min.css: {}
 
   js:
     js/script.js: {}
+    libraries/bootstrap/dist/js/bootstrap.min.js: {}
+
   dependencies:
     - core/jquery
     - core/drupal
