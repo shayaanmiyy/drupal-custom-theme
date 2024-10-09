@@ -207,11 +207,6 @@ button>a {
     color: white;
 }
 
-.view-content.row > .view-content {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .mini-pager {
     text-align: center;
 }
