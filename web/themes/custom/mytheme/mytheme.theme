@@ -5,7 +5,7 @@ use Drupal\Component\Utility\Html;
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for nodes.
  */
-function mytheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+function mytheme_theme_suggestions_node_alter(array &$suggestions, array $variables){
   $node = $variables['elements']['#node'];
   if ($node->getType() == 'blog') {
     if (!$node->get('field_type')->isEmpty()) {
@@ -14,6 +14,24 @@ function mytheme_theme_suggestions_node_alter(array &$suggestions, array $variab
         $term_slug = Html::getClass($term->label());
         $suggestions[] = 'node__blog__' . $term_slug;
         return $suggestions;
+      }
+    }
+  }
+}
+
+function mytheme_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+
+  if ($node->getType() == 'blog') {
+    if (!empty($variables['content']['field_publication_date'])) {
+      $publication_date = $variables['node']->get('field_publication_date')->value;
+      if (!empty($publication_date)) {
+        $timestamp = strtotime($publication_date);
+        if ($timestamp !== false) {
+          $formatted_date = \Drupal::service('date.formatter')->format($timestamp, 'custom', 'F j, Y');
+          $variables['content']['field_publication_date']['#markup'] = $formatted_date;
+          $variables['date'] = $formatted_date;
+        }
       }
     }
   }
