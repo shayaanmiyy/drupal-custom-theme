@@ -4,7 +4,7 @@
 	{% set photo_uri = content.field_photo is not empty ? content.field_photo : 'No Pic' %}
 	{% set name = content.field_name is not empty ? content.field_name : 'No Name Provided' %}
 	{% set title = content.field_title is not empty ? content.field_title : 'No Title Provided' %}
-	{% set bio = content.field_bio is not empty ? content.field_bio : 'No Bio Available' %}
+	{% set bio = content.field_bio_member is not empty ? content.field_bio_member : 'No Bio Available' %}
 
 	{{ macros.team_member_card(photo_uri, name, title, bio) }}
 </div>
