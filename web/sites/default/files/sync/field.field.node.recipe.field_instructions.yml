@@ -1,0 +1,19 @@
+uuid: 9b4eabc4-9044-4bbb-a66f-d7ce0c371142
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instructions
+    - node.type.recipe
+id: node.recipe.field_instructions
+field_name: field_instructions
+entity_type: node
+bundle: recipe
+label: Instructions
+description: "Ingredients 1\r\nIngredients 2\r\nIngredients 3\r\nIngredients 4"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

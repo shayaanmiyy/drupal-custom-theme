@@ -1,0 +1,9 @@
+uuid: f4d56382-553d-4d3e-81d7-c2d2e921da7e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Recipe Categories'
+vid: recipe_categories
+description: 'Categories for organizing recipes.'
+weight: 0
+new_revision: false

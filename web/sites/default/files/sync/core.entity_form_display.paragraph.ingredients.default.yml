@@ -1,0 +1,23 @@
+uuid: d758f504-7929-4142-9830-8a7186da5cb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ingredients.field_ingredients_names
+    - paragraphs.paragraphs_type.ingredients
+id: paragraph.ingredients.default
+targetEntityType: paragraph
+bundle: ingredients
+mode: default
+content:
+  field_ingredients_names:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
