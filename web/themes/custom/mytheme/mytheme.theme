@@ -18,3 +18,21 @@ function mytheme_theme_suggestions_node_alter(array &$suggestions, array $variab
     }
   }
 }
+
+function mytheme_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+
+  if ($node->getType() == 'blog') {
+    if (!empty($variables['content']['field_publication_date'])) {
+      $publication_date = $variables['node']->get('field_publication_date')->value;
+      if (!empty($publication_date)) {
+        $timestamp = strtotime($publication_date);
+        if ($timestamp !== false) {
+          $formatted_date = \Drupal::service('date.formatter')->format($timestamp, 'custom', 'F j, Y');
+          $variables['content']['field_publication_date']['#markup'] = $formatted_date;
+          $variables['date'] = $formatted_date;
+        }
+      }
+    }
+  }
+}
