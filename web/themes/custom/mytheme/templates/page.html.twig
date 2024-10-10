@@ -1,27 +1,13 @@
 {{ attach_library('mytheme/global-styling') }}
 {{ attach_library('mytheme/colorbox') }}
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ head_title }}</title>
-    {{ head }}
-    {{ css }}
-    {{ js }}
-  </head>
-  <body class="{{ body_classes }}">
-    <header>
-      {{ page.header }}
-    </header>
-    <div class="main">
-      <div class="content">
-        {{ page.content }}
-      </div>
-    </div>
-    <footer>
-      {{ page.footer }}
-    </footer>
-  </body>
-</html>
+<header>
+	{{ page.header }}
+</header>
+<main class="main mt-5 pt-5">
+	<div class="content container">
+		{{ page.content }}
+	</div>
+</main>
+<footer>
+	{{ page.footer }}
+</footer>
