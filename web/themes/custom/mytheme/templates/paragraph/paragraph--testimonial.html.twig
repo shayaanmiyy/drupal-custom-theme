@@ -1,0 +1,47 @@
+{# Check if the Rating field is present and has a value #}
+{% if content.field_rating is not empty %}
+
+  {% set rating = content.field_rating.0['#markup']|number_format(0, '.', '') %}
+
+  <div class="testimonial-block">
+    {% if rating >= 8 %}
+      <div class="testimonial-high-rating">
+        <p><strong>Rating:</strong> {{ rating }} stars</p>
+        <p><strong>Good Rating. Keep it UP!!</strong></p>
+        <blockquote>{{ content.field_text }}</blockquote>
+        <p><em>- {{ content.field_author }}</em></p>
+      </div>
+    
+    {% elseif rating >= 5 %}
+      <div class="testimonial-medium-rating">
+        <p><strong>Rating:</strong> {{ rating }} stars</p>
+        <p><strong>Medium Rating. You can do Good. All the Best!</strong></p>
+        <blockquote>{{ content.field_text }}</blockquote>
+        <p><em>- {{ content.field_author }}</em></p>
+      </div>
+    
+     {% elseif rating < 5 %}
+      <div class="testimonial-low-rating">
+        <p><strong>Rating:</strong> {{ rating }} stars</p>
+        <p><strong>Poor Rating. You have to work Hard</strong></p>
+        <blockquote>{{ content.field_text }}</blockquote>
+        <p><em>- {{ content.field_author }}</em></p>
+        <p class="low-rating-note">Note: This testimonial has a lower rating.</p>
+      </div>
+
+    {% else %}
+      <div class="testimonial-no-rating">
+        <p>No rating was provided for this testimonial.</p>
+        <blockquote>{{ content.field_text }}</blockquote>
+        <p><em>- {{ content.field_author }}</em></p>
+      </div>
+    {% endif %}
+  </div>
+
+{% else %}
+  <div class="testimonial-no-rating">
+    <p>This testimonial has no rating information.</p>
+    <blockquote>{{ content.field_text }}</blockquote>
+    <p><em>- {{ content.field_author }}</em></p>
+  </div>
+{% endif %}
