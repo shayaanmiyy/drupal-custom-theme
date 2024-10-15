@@ -7,6 +7,11 @@
     <span class="blog__type">{{ content.field_type }}</span>
   </div>
 
+  <div class="slick-slider">
+    {{ attach_library('mytheme/slick_slider') }}
+    {{ content.field_slider }}
+  </div>
+  
   <div class="blog__content">
     {{ content.field_body }}
   </div>
