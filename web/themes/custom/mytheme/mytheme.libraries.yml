@@ -10,3 +10,12 @@ global-styling:
     - core/jquery
     - core/drupalSettings
     - core/once  # Correctly included the once library
+
+slick_slider:
+  version: 1.x
+  css:
+    theme:
+      libraries/slick/slick.css: {}
+      libraries/slick/slick-theme.css: {}
+  js:
+    libraries/slick/slick.js: {}
