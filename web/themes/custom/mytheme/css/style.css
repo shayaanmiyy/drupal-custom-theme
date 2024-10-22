@@ -16,7 +16,7 @@ body {
     padding: 20px;
 }
 
-article.blog.educational {
+/* article.blog.educational {
     height: 100vh;
     background-color: navy;
     color: white;
@@ -32,7 +32,7 @@ article.blog.product {
     height: 100vh;
     background-color: green;
     color: white;
-}
+} */
 
 h1,
 h2,
