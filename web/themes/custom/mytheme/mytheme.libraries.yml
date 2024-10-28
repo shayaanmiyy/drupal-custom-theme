@@ -15,6 +15,13 @@ global-styling:
     - core/drupalSettings
     - core/once
 
+  
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/once  # Correctly included the once library
+
+
 slick_slider:
   version: 1.x
   css:
@@ -33,3 +40,4 @@ colorbox:
       libraries/colorbox/colorbox.css: {}
   dependencies:
     - core/jquery
+    libraries/slick/slick.js: {}
