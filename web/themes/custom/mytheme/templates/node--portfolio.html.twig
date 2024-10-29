@@ -1,0 +1,22 @@
+<article class="portfolio portfolio--{{ node.bundle }}">
+
+
+	<div class="cover-image">
+		{% if cover_image_url %}
+			<img src="{{ cover_image_url }}" alt="{{ content.field_cover_image[0]['#item'].alt }}">
+		{% endif %}
+	</div>
+
+	<div class="portfolio-body">
+		{{ content.body }}
+	</div>
+
+	<div class="portfolio-galleryImage text-center mx-auto">
+		<img src="{{ file_url(content.field_gallery_image[0]['#item'].entity.uri.value) }}" class="mx-auto text-center" width="450" alt="Gallery Image">
+	</div>
+
+
+	<div class="portfolio-categories">
+		{{ content.field_photo_categories }}
+	</div>
+</article>
