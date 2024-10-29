@@ -1,0 +1,19 @@
+{% extends "themes/custom/mytheme/templates/base.html.twig" %}
+
+{% block content %}
+	<div class="event-listing">
+		{% if title %}
+			<h3>{{ title }}</h3>
+		{% endif %}
+		{% for row in rows %}
+			{%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+			<div{{row.attributes.addClass(row_classes)}}>
+				{{- row.content -}}
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
