@@ -2,8 +2,8 @@
 
 
 	<div class="cover-image">
-		{% if cover_image_url %}
-			<img src="{{ cover_image_url }}" alt="{{ content.field_cover_image[0]['#item'].alt }}">
+		{% if content.field_cover_image %}
+			<img src="{{ content.field_cover_image[0]['#markup'] }}" alt="{{ content.field_cover_image[0]['#item'].alt }}">
 		{% endif %}
 	</div>
 
