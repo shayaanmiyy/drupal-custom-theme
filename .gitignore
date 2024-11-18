@@ -1,11 +1,5 @@
 .htaccess
-.htaccess
-/web/sites/default/files/php/twig/
-/web/sites/default/files/*
-/web/sites/default/files/
-
-/web/sites/default/files/css/
-/web/sites/default/files/js/
+/web/sites/default/files
 
 
 /web/core
@@ -19,6 +13,8 @@
 
 # Ignore Composer-managed dependencies.
 vendor/
+/vendor/
+
 
 # Ignore scaffold files
 web/.csslintrc
