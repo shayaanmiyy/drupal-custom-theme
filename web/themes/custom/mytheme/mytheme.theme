@@ -1,6 +1,9 @@
 <?php
 
 use Drupal\Component\Utility\Html;
+use Drupal\twig_tweak\TwigTweakExtension;
+use Drupal\image\Entity\ImageStyle;
+
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for nodes.
@@ -35,4 +38,15 @@ function mytheme_preprocess_node(&$variables) {
       }
     }
   }
+
+  if ($variables['node']->getType() === 'portfolio') {
+    if (!empty($variables['content']['field_cover_image'])) {
+      $file = $variables['node']->get('field_cover_image')->entity;
+      if ($file) {
+        $uri = $file->getFileUri();
+        $variables['cover_image_url'] = ImageStyle::load('portfolio_thumbnail')->buildUrl($uri);
+      }
+    }
+  }
+
 }
