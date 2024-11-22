@@ -16,6 +16,7 @@ vendor/
 /vendor/
 
 
+
 # Ignore scaffold files
 web/.csslintrc
 web/.editorconfig
