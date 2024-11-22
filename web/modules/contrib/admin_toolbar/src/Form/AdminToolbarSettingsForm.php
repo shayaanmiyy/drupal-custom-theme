@@ -2,8 +2,11 @@
 
 namespace Drupal\admin_toolbar\Form;
 
+use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Menu\MenuLinkManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -28,13 +31,30 @@ class AdminToolbarSettingsForm extends ConfigFormBase {
   protected $menuLinkManager;
 
   /**
+   * AdminToolbarSettingsForm constructor.
+   *
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   The config factory for the form.
+   * @param \Drupal\Core\Menu\MenuLinkManagerInterface $menuLinkManager
+   *   A menu link manager instance.
+   * @param \Drupal\Core\Cache\CacheBackendInterface $cacheMenu
+   *   A cache menu instance.
+   */
+  public function __construct(ConfigFactoryInterface $config_factory, MenuLinkManagerInterface $menuLinkManager, CacheBackendInterface $cacheMenu) {
+    parent::__construct($config_factory);
+    $this->cacheMenu = $cacheMenu;
+    $this->menuLinkManager = $menuLinkManager;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    $instance = parent::create($container);
-    $instance->cacheMenu = $container->get('plugin.manager.menu.link');
-    $instance->menuLinkManager = $container->get('cache.menu');
-    return $instance;
+    return new static(
+      $container->get('config.factory'),
+      $container->get('plugin.manager.menu.link'),
+      $container->get('cache.menu')
+    );
   }
 
   /**
