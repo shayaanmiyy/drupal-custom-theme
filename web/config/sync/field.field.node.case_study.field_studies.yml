@@ -1,0 +1,34 @@
+uuid: e1dd0d6d-1826-4910-a3b4-92f3a6640f2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_studies
+    - node.type.case_study
+    - paragraphs.paragraphs_type.testimonial
+  module:
+    - entity_reference_revisions
+id: node.case_study.field_studies
+field_name: field_studies
+entity_type: node
+bundle: case_study
+label: Studies
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      testimonial: testimonial
+    negate: 0
+    target_bundles_drag_drop:
+      service_details:
+        weight: 3
+        enabled: false
+      testimonial:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions
