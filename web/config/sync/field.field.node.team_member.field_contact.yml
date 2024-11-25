@@ -1,0 +1,19 @@
+uuid: fdbe8d13-fb28-4708-bed3-968df84262c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.team_member
+id: node.team_member.field_contact
+field_name: field_contact
+entity_type: node
+bundle: team_member
+label: Contact
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
