@@ -1,0 +1,9 @@
+<div class="view-content">
+  {% for row in rows %}
+    <div class="view-row">
+      {{ row.content }}
+    </div>
+  {% else %}
+    <p>No results found.</p>
+  {% endfor %}
+</div>

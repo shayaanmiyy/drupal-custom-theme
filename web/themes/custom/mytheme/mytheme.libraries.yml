@@ -1,15 +1,26 @@
 global-styling:
-  version: 1
+  version: 1.x
   css:
     theme:
       css/style.css: {}
+      libraries/bootstrap/dist/css/bootstrap.min.css: {}
+
   js:
     js/script.js: {}
+    libraries/bootstrap/dist/js/bootstrap.min.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+
   
   dependencies:
     - core/jquery
     - core/drupalSettings
     - core/once  # Correctly included the once library
+
 
 slick_slider:
   version: 1.x
@@ -18,4 +29,15 @@ slick_slider:
       libraries/slick/slick.css: {}
       libraries/slick/slick-theme.css: {}
   js:
+    libraries/slick/slick.js: {}
+
+colorbox:
+  version: 1.x
+  js:
+    libraries/colorbox/colorbox-min.js: {}
+  css:
+    theme:
+      libraries/colorbox/colorbox.css: {}
+  dependencies:
+    - core/jquery
     libraries/slick/slick.js: {}

@@ -1,0 +1,19 @@
+uuid: ea47ace7-f49d-49ec-aa2a-49df86117c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_title
+    - node.type.employee_directory
+id: node.employee_directory.field_job_title
+field_name: field_job_title
+entity_type: node
+bundle: employee_directory
+label: 'Job Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

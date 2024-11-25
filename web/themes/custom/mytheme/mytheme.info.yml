@@ -5,7 +5,8 @@ core_version_requirement: ^10.3 || ^11.0
 base theme: 'bootstrap'
 
 libraries:
-  - mytheme/global-styling
+  # - mytheme/global-styling
+  - bootstrap/global-styling
 
 regions:
   top_header: 'Top header'

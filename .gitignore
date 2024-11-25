@@ -1,11 +1,12 @@
 .htaccess
 /web/sites/default/files
 
-
 /web/core
 /web/libraries
 /web/modules/contrib
+web/modules/contrib
 /web/profiles/contrib
+web/profiles/contrib
 /web/themes/contrib
 /web/sites/default/files
 /drush/contrib/

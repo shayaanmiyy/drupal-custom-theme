@@ -1,0 +1,18 @@
+uuid: 1ddba506-2465-40c5-bfb5-71bb5c04366a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.employee_directory
+id: node.employee_directory.title
+field_name: title
+entity_type: node
+bundle: employee_directory
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

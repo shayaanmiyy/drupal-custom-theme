@@ -1,0 +1,19 @@
+uuid: 70b9d24a-bba5-45a0-85da-3c207c637ff7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_information
+    - node.type.employee_directory
+id: node.employee_directory.field_contact_information
+field_name: field_contact_information
+entity_type: node
+bundle: employee_directory
+label: 'Contact Information'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

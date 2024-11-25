@@ -1,0 +1,18 @@
+{% macro team_member_card(photo, name, title, bio) %}
+	<div class="card text-center">
+		<div class="card-header">
+			Featured
+		</div>
+		<div class="card-body">
+			<div class="team-member-photo w-50 mx-auto">
+				{{ photo }}
+			</div>
+			<h5 class="card-title">{{ name|default('No Name Provided') }}</h5>
+			<p class="card-text">{{ title|default('No Title Provided') }}</p>
+			<p class="team-member-bio">{{ bio|default('No Bio Available') }}</p>
+		</div>
+		<div class="card-footer text-muted">
+			Team Member
+		</div>
+	</div>
+{% endmacro %}
